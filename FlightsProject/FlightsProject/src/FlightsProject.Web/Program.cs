@@ -1,105 +1,102 @@
-﻿using System.Reflection;
-using Ardalis.ListStartupServices;
-using Ardalis.SharedKernel;
-using FastEndpoints;
-using FastEndpoints.Swagger;
-using MediatR;
+﻿
+using System;
+using FlightsProject.Infrastructure;
+using FlightsProject.Infrastructure.Data;
+using FlightsProject.Infrastructure.Persistence;
+using FlightsProject.UseCases;
+using FlightsProject.Web.Extensions;
 using Serilog;
 using Serilog.Extensions.Logging;
 
-var logger = Log.Logger = new LoggerConfiguration()
-  .Enrich.FromLogContext()
-  .WriteTo.Console()
-  .CreateLogger();
-
-logger.Information("Starting web host");
-
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
-var microsoftLogger = new SerilogLoggerFactory(logger)
-    .CreateLogger<Program>();
+// Configure Logging
+ConfigureLogging(builder);
 
-// Configure Web Behavior
-builder.Services.Configure<CookiePolicyOptions>(options =>
-{
-  options.CheckConsentNeeded = context => true;
-  options.MinimumSameSitePolicy = SameSiteMode.None;
-});
+// Add Services to the DI Container
+ConfigureServices(builder);
 
-builder.Services.AddFastEndpoints()
-                .SwaggerDocument(o =>
-                {
-                  o.ShortSchemaNames = true;
-                });
-
-
-
-if (builder.Environment.IsDevelopment())
-{
-  
-
-  // Otherwise use this:
-  //builder.Services.AddScoped<IEmailSender, FakeEmailSender>();
-  AddShowAllServicesSupport();
-}
-else
-{
-  
-}
-
+// Build the Web Application
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-  app.UseDeveloperExceptionPage();
-  app.UseShowAllServicesMiddleware(); // see https://github.com/ardalis/AspNetCoreStartupServices
-}
-else
-{
-  app.UseDefaultExceptionHandler(); // from FastEndpoints
-  app.UseHsts();
-}
+// Configure the HTTP Request Pipeline
+ConfigureMiddleware(app);
 
-app.UseFastEndpoints()
-    .UseSwaggerGen(); // Includes AddFileServer and static files middleware
-
-app.UseHttpsRedirection();
-
+// Seed the Database
 SeedDatabase(app);
 
+// Run the Application
 app.Run();
 
-static void SeedDatabase(WebApplication app)
+// Logging Configuration
+void ConfigureLogging(WebApplicationBuilder builder)
+{
+  Log.Logger = new LoggerConfiguration()
+      .Enrich.FromLogContext()
+      .WriteTo.Console()
+      .CreateLogger();
+
+  Log.Information("Starting web host");
+
+  builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
+}
+
+// Service Registration
+void ConfigureServices(WebApplicationBuilder builder)
+{
+  builder.Services.AddControllers();
+  builder.Services.AddEndpointsApiExplorer();
+  builder.Services.AddSwaggerGen();
+
+  // Custom Application and Infrastructure Services
+  builder.Services.AddInfrastructure(builder.Configuration);
+  builder.Services.AddApplication();
+
+  // CORS Policy
+  builder.Services.AddCors(options =>
+      options.AddPolicy("ApiCorsPolicy", policyBuilder =>
+          policyBuilder.WithOrigins("http://localhost:4200")
+                       .AllowAnyMethod()
+                       .AllowAnyHeader()));
+}
+
+// Middleware and HTTP Request Pipeline Configuration
+void ConfigureMiddleware(WebApplication app)
+{
+  if (app.Environment.IsDevelopment())
+  {
+    app.UseSwagger();
+    app.UseSwaggerUI();
+    app.ApplyMigrations(); // Extension for applying migrations
+  }
+
+  app.UseHttpsRedirection();
+  app.UseCors("ApiCorsPolicy");
+  app.UseExceptionHandler("/error");
+
+  app.MapControllers();
+}
+
+// Seed Database
+void SeedDatabase(WebApplication app)
 {
   using var scope = app.Services.CreateScope();
   var services = scope.ServiceProvider;
 
   try
   {
-    
+    var context = services.GetRequiredService<ApplicationDbContext>();
+    context.Database.EnsureCreated(); // Ensure database creation
+    SeedData.Initialize(services); // Custom seed data logic
   }
   catch (Exception ex)
   {
     var logger = services.GetRequiredService<ILogger<Program>>();
-    logger.LogError(ex, "An error occurred seeding the DB. {exceptionMessage}", ex.Message);
+    logger.LogError(ex, "An error occurred while seeding the database: {exceptionMessage}", ex.Message);
   }
 }
 
-
-void AddShowAllServicesSupport()
-{
-  // add list services for diagnostic purposes - see https://github.com/ardalis/AspNetCoreStartupServices
-  builder.Services.Configure<ServiceConfig>(config =>
-  {
-    config.Services = new List<ServiceDescriptor>(builder.Services);
-
-    // optional - default path to view services is /listallservices - recommended to choose your own path
-    config.Path = "/listservices";
-  });
-}
-
-// Make the implicit Program.cs class public, so integration tests can reference the correct assembly for host building
+// Public Program class for integration tests
 public partial class Program
 {
 }
