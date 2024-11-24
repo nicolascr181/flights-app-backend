@@ -25,7 +25,7 @@ public sealed class Journey: AggregateRoot
 
   public Journey() { }
 
-  public string TotalPrice => (Flights?.Sum(flight => flight?.Price ?? 0) ?? 0).ToString("C", CultureInfo.CreateSpecificCulture(Currency));
+  public double TotalPrice => Math.Round(Flights?.Sum(flight => flight?.Price ?? 0) ?? 0, 2);
 }
 
 

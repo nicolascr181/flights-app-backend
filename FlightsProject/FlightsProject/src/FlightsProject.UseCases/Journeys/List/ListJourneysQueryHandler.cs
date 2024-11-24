@@ -31,9 +31,9 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
 
 
       // Convert prices using the service
-      if (!string.IsNullOrEmpty(currencyType))
+      if (!string.IsNullOrEmpty(currencyType) && !currencyType.Equals("USD"))
       {
-        journeys = _journeyPriceConverter.ConvertPrices(journeys, currencyType);
+        journeys = await _journeyPriceConverter.ConvertPrices(journeys, currencyType);
       }
 
       journeysResponse.Add(new JourneyDTO

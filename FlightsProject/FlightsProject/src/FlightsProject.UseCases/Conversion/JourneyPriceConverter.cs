@@ -22,7 +22,7 @@ public class JourneyPriceConverter : IJourneyPriceConverter
   /// <param name="journeys"></param>
   /// <param name="targetCurrency"></param>
   /// <returns></returns>
-  public List<Journey> ConvertPrices(List<Journey> journeys, string targetCurrency)
+  public async Task<List<Journey>> ConvertPrices(List<Journey> journeys, string targetCurrency)
   {
     foreach (Journey journey in journeys)
     {
@@ -33,7 +33,7 @@ public class JourneyPriceConverter : IJourneyPriceConverter
       {
         if (flight.Price.HasValue) // Check if Price is not null
         {
-          flight.Price = _currencyConverter.Convert(flight.Price.Value, targetCurrency);
+          flight.Price = await _currencyConverter.Convert(flight.Price.Value, targetCurrency);
         }
       }
     }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Azure;
+using FlightsProject.Core.Entities;
 using FlightsProject.Core.Interfaces;
 using freecurrencyapi;
 using Newtonsoft.Json;
@@ -20,7 +22,7 @@ public class DynamicCurrencyConverter : ICurrencyConverter
     _currencyApi = new Freecurrencyapi(apiKey);
   }
 
-  public double Convert(double amount, string targetCurrency, string baseCurrency = "USD")
+  public async Task<double> Convert(double amount, string targetCurrency, string baseCurrency = "USD")
   {
     if (string.IsNullOrWhiteSpace(targetCurrency))
       throw new ArgumentException("Target currency cannot be null or empty.", nameof(targetCurrency));
@@ -29,7 +31,7 @@ public class DynamicCurrencyConverter : ICurrencyConverter
       throw new ArgumentException("Base currency cannot be null or empty.", nameof(baseCurrency));
 
     // Fetch the exchange rates response as a string
-    string response = _currencyApi.Latest(baseCurrency, targetCurrency);
+    string response  = await Task.FromResult(_currencyApi.Latest(baseCurrency, targetCurrency));
 
     // Parse the response string (assuming it returns JSON)
     var ratesResponse = JsonConvert.DeserializeObject<CurrencyRatesResponse>(response);
@@ -43,16 +45,22 @@ public class DynamicCurrencyConverter : ICurrencyConverter
     return amount * ratesResponse.Data[targetCurrency];
   }
 
-  public class CurrencyRatesResponse
+  public async Task<IDictionary<string, CurrencyDetails>> GetCurrencyDetails()
   {
-    [JsonProperty("data")]
-    public Dictionary<string, double> Data { get; set; }
+    // Implementation for getting all currency details
+    string response = await Task.FromResult(_currencyApi.Currencies());
 
-    public CurrencyRatesResponse()
+    CurrencyResponse? currencyResponse = JsonConvert.DeserializeObject<CurrencyResponse>(response);
+
+    if (currencyResponse == null || (currencyResponse.Data.Count == 0))
     {
-      Data = new Dictionary<string, double>();
+      throw new ArgumentException($"Error when getting available currencies from API");
     }
+
+
+    return currencyResponse.Data;
+   }
+
+    
   }
 
-  
-}

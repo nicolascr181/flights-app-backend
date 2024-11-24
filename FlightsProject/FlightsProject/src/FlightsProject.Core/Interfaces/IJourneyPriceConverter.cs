@@ -8,5 +8,5 @@ using FlightsProject.Core.Entities;
 namespace FlightsProject.Core.Interfaces;
 public interface IJourneyPriceConverter
 {
-  List<Journey> ConvertPrices(List<Journey> journeys, string targetCurrency);
+  Task<List<Journey>> ConvertPrices(List<Journey> journeys, string targetCurrency);
 }
