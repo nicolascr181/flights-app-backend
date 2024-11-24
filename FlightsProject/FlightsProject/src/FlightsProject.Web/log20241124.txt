@@ -1,0 +1,29 @@
+2024-11-24 12:31:54.393 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-11-24 12:31:54.437 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-11-24 12:31:54.450 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-24 12:31:54.462 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-11-24 12:31:54.706 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-11-24 12:31:54.982 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Flights" AS "f")
+2024-11-24 12:31:55.265 -05:00 [INF] Now listening on: https://localhost:57679
+2024-11-24 12:31:55.270 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-24 12:31:55.272 -05:00 [INF] Hosting environment: Development
+2024-11-24 12:31:55.273 -05:00 [INF] Content root path: C:\Users\Nicolas\Documents\Desarrollo Local\flights-app-backend\FlightsProject\FlightsProject\src\FlightsProject.Web
+2024-11-24 12:31:56.664 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2024-11-24 12:31:56.959 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html;charset=utf-8 304.7122ms
+2024-11-24 12:31:56.999 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.js - null null
+2024-11-24 12:31:57.001 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-24 12:31:57.015 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.js - 200 null application/javascript;charset=utf-8 15.9117ms
+2024-11-24 12:31:57.030 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 28.9054ms
+2024-11-24 12:31:57.042 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2024-11-24 12:31:57.115 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 72.5514ms
+2024-11-24 12:31:57.379 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2024-11-24 12:31:57.537 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.1433ms

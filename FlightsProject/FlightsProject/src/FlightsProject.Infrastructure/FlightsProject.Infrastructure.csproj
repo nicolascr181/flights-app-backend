@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Ardalis.SharedKernel" />
+    <PackageReference Include="freecurrencyapi" />
     <PackageReference Include="MailKit" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" PrivateAssets="all" />

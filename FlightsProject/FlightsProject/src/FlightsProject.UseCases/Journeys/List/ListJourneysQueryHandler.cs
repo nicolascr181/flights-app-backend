@@ -1,15 +1,18 @@
 ﻿using FlightsProject.Core.Entities;
 using FlightsProject.Core.Interfaces;
+using FlightsProject.UseCases.Conversion;
 using FlightsProject.UseCases.Graphs;
 
 namespace FlightsProject.UseCases.Journeys.List;
 public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyCommand, ErrorOr<List<JourneyDTO>>>
 {
   private readonly IFlightRepository _flightRepository;
+  private readonly IJourneyPriceConverter _journeyPriceConverter;
 
-  public ListJourneysQueryHandler(IFlightRepository flightRepository)
+  public ListJourneysQueryHandler(IFlightRepository flightRepository, IJourneyPriceConverter journeyPriceConverter)
   {
     _flightRepository = flightRepository ?? throw new ArgumentNullException(nameof(flightRepository));
+    _journeyPriceConverter = journeyPriceConverter ?? throw new ArgumentNullException(nameof(journeyPriceConverter));
   }
   public async Task<ErrorOr<List<JourneyDTO>>> Handle(FilterJourneyCommand command, CancellationToken cancellationToken)
   {
@@ -19,11 +22,19 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
 
       string origin = command.Origin;
       string destination = command.Destination;
+      string currencyType = command.CurrencyType;
 
       IReadOnlyList<Flight> flights = await _flightRepository.GetFlightsAsync();
       List<Flight> flightList = flights.ToList();
 
       List<Journey> journeys = GenerateJourneys(flightList, origin, destination, command);
+
+
+      // Convert prices using the service
+      if (!string.IsNullOrEmpty(currencyType))
+      {
+        journeys = _journeyPriceConverter.ConvertPrices(journeys, currencyType);
+      }
 
       journeysResponse.Add(new JourneyDTO
       {
