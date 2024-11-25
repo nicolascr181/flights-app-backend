@@ -26,16 +26,9 @@ public class JourneyPriceConverter : IJourneyPriceConverter
   {
     foreach (Journey journey in journeys)
     {
-      if (journey.Flights == null)
-        continue;
-
-      foreach (Flight flight in journey.Flights)
-      {
-        if (flight.Price.HasValue) // Check if Price is not null
-        {
-          flight.Price = await _currencyConverter.Convert(flight.Price.Value, targetCurrency);
-        }
-      }
+     
+       journey.TotalPrice = await _currencyConverter.Convert(journey.TotalFlightsPrice, targetCurrency);
+     
     }
     return journeys;
   }

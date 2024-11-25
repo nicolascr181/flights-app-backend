@@ -24,11 +24,17 @@ public class DynamicCurrencyConverter : ICurrencyConverter
 
   public async Task<double> Convert(double amount, string targetCurrency, string baseCurrency = "USD")
   {
+
     if (string.IsNullOrWhiteSpace(targetCurrency))
       throw new ArgumentException("Target currency cannot be null or empty.", nameof(targetCurrency));
 
     if (string.IsNullOrWhiteSpace(baseCurrency))
       throw new ArgumentException("Base currency cannot be null or empty.", nameof(baseCurrency));
+
+    if (targetCurrency.Equals("USD"))
+    {
+      return amount;
+    }
 
     // Fetch the exchange rates response as a string
     string response  = await Task.FromResult(_currencyApi.Latest(baseCurrency, targetCurrency));

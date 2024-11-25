@@ -31,7 +31,7 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
 
 
       // Convert prices using the service
-      if (!string.IsNullOrEmpty(currencyType) && !currencyType.Equals("USD"))
+      if (!string.IsNullOrEmpty(currencyType))
       {
         journeys = await _journeyPriceConverter.ConvertPrices(journeys, currencyType);
       }
@@ -49,6 +49,11 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
         string returnDestination = origin;
 
         List<Journey> returnJourneys = GenerateJourneys(flightList, returnOrigin, returnDestination,command);
+
+        if (!string.IsNullOrEmpty(currencyType) && !currencyType.Equals("USD"))
+        {
+          journeys = await _journeyPriceConverter.ConvertPrices(returnJourneys, currencyType);
+        }
 
         journeysResponse.Add(new JourneyDTO
         {
@@ -74,7 +79,6 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
     {
       Origin = source,
       Destination = destination,
-      Price = 0,
       Flights = flightsAux,
       Currency = command.CurrencyType
     }).ToList();
