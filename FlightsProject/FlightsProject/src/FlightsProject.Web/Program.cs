@@ -1,12 +1,9 @@
-﻿
-using System;
-using FlightsProject.Infrastructure;
+﻿using FlightsProject.Infrastructure;
 using FlightsProject.Infrastructure.Data;
 using FlightsProject.Infrastructure.Persistence;
 using FlightsProject.UseCases;
 using FlightsProject.Web.Extensions;
 using Serilog;
-using Serilog.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 

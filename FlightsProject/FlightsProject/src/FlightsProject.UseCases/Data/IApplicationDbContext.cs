@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightsProject.UseCases.Data;
+
 public interface IApplicationDbContext
 {
   DbSet<Journey> Journeys { get; set; }

@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Azure;
-using FlightsProject.Core.Entities;
+﻿using FlightsProject.Core.Entities;
 using FlightsProject.Core.Interfaces;
 using freecurrencyapi;
 using Newtonsoft.Json;
 
 namespace FlightsProject.Infrastructure.Services;
+
 public class DynamicCurrencyConverter : ICurrencyConverter
 {
   private readonly Freecurrencyapi _currencyApi;
@@ -63,10 +58,8 @@ public class DynamicCurrencyConverter : ICurrencyConverter
       throw new ArgumentException($"Error when getting available currencies from API");
     }
 
-
     return currencyResponse.Data;
-   }
 
-    
-  }
+   }    
+}
 

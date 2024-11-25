@@ -34,13 +34,10 @@ public static class DependencyInjection
 
   private static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
   {
-
     services.AddDbContext<ApplicationDbContext>(options => options.UseSqlite(configuration.GetConnectionString("SqliteConnection")));
 
     services.AddScoped<IApplicationDbContext>(sp =>sp.GetRequiredService<ApplicationDbContext>());
-
     services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<ApplicationDbContext>());
-
     services.AddScoped<IJourneyRepository, JourneyRepository>();
     services.AddScoped<IFlightRepository, FlightRepository>();
     services.AddScoped<IJourneyPriceConverter, JourneyPriceConverter>();

@@ -2,9 +2,8 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace FlightsProject.Web.Controllers;
+
 [Route("v1/journey")]
 [ApiController]
 public class JourneyController : APIController
@@ -26,6 +25,10 @@ public class JourneyController : APIController
   /// <response code="400">If the request is invalid.</response>
   /// <response code="500">If an internal error occurs.</response>
   [HttpPost]
+  [ProducesResponseType(StatusCodes.Status200OK)] // Successful response
+  [ProducesResponseType(StatusCodes.Status400BadRequest)] // Bad request
+  [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Internal server error
+  [Produces("application/json")]
   public async Task<IActionResult> ListJourneys([FromBody] FilterJourneyCommand command)
   {
     var journeysResult = await _mediator.Send(command);

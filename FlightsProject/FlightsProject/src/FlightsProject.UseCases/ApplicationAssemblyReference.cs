@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 
-
 namespace FlightsProject.UseCases;
   public class ApplicationAssemblyReference
   {

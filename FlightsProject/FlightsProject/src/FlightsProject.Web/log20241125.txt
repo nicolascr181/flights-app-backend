@@ -747,3 +747,257 @@ FROM "Flights" AS "f"
 2024-11-25 10:47:19.241 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 2837.2042ms
 2024-11-25 10:47:19.242 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
 2024-11-25 10:47:19.244 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 2846.9896ms
+2024-11-25 11:27:45.804 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 11:27:45.816 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:27:45.819 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:27:45.833 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 11:27:46.502 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:27:46.514 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 679.618ms
+2024-11-25 11:27:46.517 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:27:46.519 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 716.015ms
+2024-11-25 11:31:38.591 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 11:31:38.599 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:31:38.600 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:31:38.602 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 11:31:40.111 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:31:40.115 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 1511.0798ms
+2024-11-25 11:31:40.117 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:31:40.119 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 1531.9449ms
+2024-11-25 11:33:00.788 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 11:33:00.795 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:33:00.796 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:33:00.797 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 11:33:01.421 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:33:01.426 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 627.3797ms
+2024-11-25 11:33:01.429 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:33:01.432 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 645.1141ms
+2024-11-25 11:33:59.636 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:57679/v1/journey - null null
+2024-11-25 11:33:59.645 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:33:59.646 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:57679/v1/journey - 204 null null 11.5911ms
+2024-11-25 11:33:59.653 -05:00 [INF] Request starting HTTP/2 POST https://localhost:57679/v1/journey - application/json 77
+2024-11-25 11:33:59.657 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:33:59.658 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 11:33:59.659 -05:00 [INF] Route matched with {action = "ListJourneys", controller = "Journey"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListJourneys(FlightsProject.UseCases.Journeys.List.FilterJourneyCommand) on controller FlightsProject.Web.Controllers.JourneyController (FlightsProject.Web).
+2024-11-25 11:33:59.677 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Destination", "f"."JourneyId", "f"."Origin", "f"."Price", "f"."TRANSPORT"
+FROM "Flights" AS "f"
+2024-11-25 11:33:59.682 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightsProject.UseCases.Journeys.JourneyDTO, FlightsProject.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:33:59.684 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 24.5159ms
+2024-11-25 11:33:59.688 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 11:33:59.689 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 36.2524ms
+2024-11-25 11:34:06.345 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:57679/v1/journey - null null
+2024-11-25 11:34:06.347 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:34:06.348 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:57679/v1/journey - 204 null null 4.2257ms
+2024-11-25 11:34:06.354 -05:00 [INF] Request starting HTTP/2 POST https://localhost:57679/v1/journey - application/json 77
+2024-11-25 11:34:06.357 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:34:06.358 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 11:34:06.359 -05:00 [INF] Route matched with {action = "ListJourneys", controller = "Journey"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListJourneys(FlightsProject.UseCases.Journeys.List.FilterJourneyCommand) on controller FlightsProject.Web.Controllers.JourneyController (FlightsProject.Web).
+2024-11-25 11:34:06.363 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Destination", "f"."JourneyId", "f"."Origin", "f"."Price", "f"."TRANSPORT"
+FROM "Flights" AS "f"
+2024-11-25 11:34:06.367 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightsProject.UseCases.Journeys.JourneyDTO, FlightsProject.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:34:06.368 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 6.3345ms
+2024-11-25 11:34:06.369 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 11:34:06.374 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 19.75ms
+2024-11-25 11:40:16.772 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 11:40:16.785 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:40:16.786 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:40:16.787 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 11:40:17.572 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:40:17.575 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 785.9737ms
+2024-11-25 11:40:17.577 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:40:17.579 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 808.7065ms
+2024-11-25 11:40:36.174 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 11:40:36.178 -05:00 [INF] CORS policy execution successful.
+2024-11-25 11:40:36.179 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:40:36.180 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 11:40:36.442 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 11:40:36.446 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 264.0333ms
+2024-11-25 11:40:36.451 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 11:40:36.455 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 281.6497ms
+2024-11-25 13:40:27.932 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:40:27.943 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:40:27.944 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:40:27.945 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:40:28.573 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:40:28.576 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 629.7829ms
+2024-11-25 13:40:28.580 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:40:28.583 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 699.0113ms
+2024-11-25 13:42:13.826 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:42:13.829 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:42:13.830 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:42:13.831 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:42:14.346 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:42:14.348 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 515.1535ms
+2024-11-25 13:42:14.349 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:42:14.350 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 524.5947ms
+2024-11-25 13:43:41.468 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:43:41.479 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:43:41.480 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:43:41.481 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:43:41.999 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:43:42.001 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 518.983ms
+2024-11-25 13:43:42.003 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:43:42.004 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 536.039ms
+2024-11-25 13:44:41.322 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:44:41.338 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:44:41.339 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:44:41.341 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:44:41.673 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:44:41.674 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 332.0346ms
+2024-11-25 13:44:41.675 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:44:41.677 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 354.9933ms
+2024-11-25 13:50:55.448 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:50:55.463 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:50:55.464 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:50:55.465 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:50:56.201 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:50:56.204 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 737.7086ms
+2024-11-25 13:50:56.208 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:50:56.209 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 761.7311ms
+2024-11-25 13:51:54.472 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:51:54.476 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:51:54.477 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:51:54.478 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:51:54.848 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:51:54.853 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 373.7902ms
+2024-11-25 13:51:54.855 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:51:54.857 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 384.6546ms
+2024-11-25 13:52:53.609 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 13:52:53.613 -05:00 [INF] CORS policy execution successful.
+2024-11-25 13:52:53.616 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:52:53.617 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 13:52:53.985 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 13:52:53.987 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 368.2329ms
+2024-11-25 13:52:53.989 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 13:52:53.990 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 380.366ms
+2024-11-25 15:21:54.629 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-11-25 15:21:54.672 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-11-25 15:21:54.688 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-25 15:21:54.702 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-11-25 15:21:55.071 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-11-25 15:21:55.342 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Flights" AS "f")
+2024-11-25 15:21:55.604 -05:00 [INF] Now listening on: https://localhost:57679
+2024-11-25 15:21:55.608 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 15:21:55.609 -05:00 [INF] Hosting environment: Development
+2024-11-25 15:21:55.610 -05:00 [INF] Content root path: C:\Users\Nicolas\Documents\Desarrollo Local\flights-app-backend\FlightsProject\FlightsProject\src\FlightsProject.Web
+2024-11-25 15:21:56.221 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2024-11-25 15:21:56.498 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html;charset=utf-8 285.9596ms
+2024-11-25 15:21:56.525 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-25 15:21:56.525 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.js - null null
+2024-11-25 15:21:56.533 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.js - 200 null application/javascript;charset=utf-8 9.0617ms
+2024-11-25 15:21:56.542 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 17.5277ms
+2024-11-25 15:21:56.578 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2024-11-25 15:21:56.651 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 73.1342ms
+2024-11-25 15:21:56.775 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2024-11-25 15:21:56.947 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 171.996ms
+2024-11-25 15:22:46.829 -05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-11-25 15:22:46.887 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2024-11-25 15:22:46.913 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-25 15:22:46.930 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-11-25 15:22:47.062 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2024-11-25 15:22:47.258 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Flights" AS "f")
+2024-11-25 15:22:47.436 -05:00 [INF] Now listening on: https://localhost:57679
+2024-11-25 15:22:47.440 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-25 15:22:47.440 -05:00 [INF] Hosting environment: Development
+2024-11-25 15:22:47.441 -05:00 [INF] Content root path: C:\Users\Nicolas\Documents\Desarrollo Local\flights-app-backend\FlightsProject\FlightsProject\src\FlightsProject.Web
+2024-11-25 15:22:48.012 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.html - null null
+2024-11-25 15:22:48.228 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.html - 200 null text/html;charset=utf-8 221.4163ms
+2024-11-25 15:22:48.262 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-25 15:22:48.262 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/index.js - null null
+2024-11-25 15:22:48.274 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/index.js - 200 null application/javascript;charset=utf-8 12.3037ms
+2024-11-25 15:22:48.285 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 22.6741ms
+2024-11-25 15:22:48.312 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/_vs/browserLink - null null
+2024-11-25 15:22:48.357 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/_vs/browserLink - 200 null text/javascript; charset=UTF-8 45.5056ms
+2024-11-25 15:22:48.483 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - null null
+2024-11-25 15:22:48.601 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 118.009ms
+2024-11-25 15:24:08.712 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 15:24:08.720 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:24:08.725 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 15:24:08.746 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 15:24:11.104 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 15:24:11.140 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 2386.1265ms
+2024-11-25 15:24:11.142 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 15:24:11.146 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 2434.318ms
+2024-11-25 15:24:36.823 -05:00 [INF] Request starting HTTP/2 GET https://localhost:57679/v1/currency - null null
+2024-11-25 15:24:36.843 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:24:36.844 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 15:24:36.845 -05:00 [INF] Route matched with {action = "GetCurrencyDetails", controller = "Currency"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrencyDetails() on controller FlightsProject.Web.Controllers.CurrencyController (FlightsProject.Web).
+2024-11-25 15:24:37.117 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[FlightsProject.Core.Entities.CurrencyDetails, FlightsProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 15:24:37.123 -05:00 [INF] Executed action FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web) in 276.5911ms
+2024-11-25 15:24:37.127 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.CurrencyController.GetCurrencyDetails (FlightsProject.Web)'
+2024-11-25 15:24:37.129 -05:00 [INF] Request finished HTTP/2 GET https://localhost:57679/v1/currency - 200 null application/json; charset=utf-8 306.4236ms
+2024-11-25 15:24:43.153 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:57679/v1/journey - null null
+2024-11-25 15:24:43.161 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:24:43.163 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:57679/v1/journey - 204 null null 10.1599ms
+2024-11-25 15:24:43.170 -05:00 [INF] Request starting HTTP/2 POST https://localhost:57679/v1/journey - application/json 77
+2024-11-25 15:24:43.172 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:24:43.175 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:24:43.205 -05:00 [INF] Route matched with {action = "ListJourneys", controller = "Journey"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListJourneys(FlightsProject.UseCases.Journeys.List.FilterJourneyCommand) on controller FlightsProject.Web.Controllers.JourneyController (FlightsProject.Web).
+2024-11-25 15:24:43.470 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Destination", "f"."JourneyId", "f"."Origin", "f"."Price", "f"."TRANSPORT"
+FROM "Flights" AS "f"
+2024-11-25 15:24:43.619 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightsProject.UseCases.Journeys.JourneyDTO, FlightsProject.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 15:24:43.659 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 449.9813ms
+2024-11-25 15:24:43.663 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:24:43.669 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 498.3861ms
+2024-11-25 15:24:53.574 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:57679/v1/journey - null null
+2024-11-25 15:24:53.581 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:24:53.582 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:57679/v1/journey - 204 null null 8.7752ms
+2024-11-25 15:24:53.585 -05:00 [INF] Request starting HTTP/2 POST https://localhost:57679/v1/journey - application/json 80
+2024-11-25 15:24:53.588 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:24:53.589 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:24:53.590 -05:00 [INF] Route matched with {action = "ListJourneys", controller = "Journey"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListJourneys(FlightsProject.UseCases.Journeys.List.FilterJourneyCommand) on controller FlightsProject.Web.Controllers.JourneyController (FlightsProject.Web).
+2024-11-25 15:24:53.595 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Destination", "f"."JourneyId", "f"."Origin", "f"."Price", "f"."TRANSPORT"
+FROM "Flights" AS "f"
+2024-11-25 15:24:53.599 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightsProject.UseCases.Journeys.JourneyDTO, FlightsProject.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 15:24:53.601 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 10.1351ms
+2024-11-25 15:24:53.603 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:24:53.605 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 19.3503ms
+2024-11-25 15:25:14.171 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:57679/v1/journey - null null
+2024-11-25 15:25:14.185 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:25:14.186 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:57679/v1/journey - 204 null null 15.3231ms
+2024-11-25 15:25:14.192 -05:00 [INF] Request starting HTTP/2 POST https://localhost:57679/v1/journey - application/json 80
+2024-11-25 15:25:14.195 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:25:14.196 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:25:14.197 -05:00 [INF] Route matched with {action = "ListJourneys", controller = "Journey"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListJourneys(FlightsProject.UseCases.Journeys.List.FilterJourneyCommand) on controller FlightsProject.Web.Controllers.JourneyController (FlightsProject.Web).
+2024-11-25 15:25:14.207 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Destination", "f"."JourneyId", "f"."Origin", "f"."Price", "f"."TRANSPORT"
+FROM "Flights" AS "f"
+2024-11-25 15:25:14.210 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightsProject.UseCases.Journeys.JourneyDTO, FlightsProject.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 15:25:14.218 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 18.4597ms
+2024-11-25 15:25:14.219 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:25:14.221 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 28.5442ms
+2024-11-25 15:25:23.935 -05:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:57679/v1/journey - null null
+2024-11-25 15:25:23.939 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:25:23.940 -05:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:57679/v1/journey - 204 null null 5.077ms
+2024-11-25 15:25:23.943 -05:00 [INF] Request starting HTTP/2 POST https://localhost:57679/v1/journey - application/json 80
+2024-11-25 15:25:23.945 -05:00 [INF] CORS policy execution successful.
+2024-11-25 15:25:23.946 -05:00 [INF] Executing endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:25:23.946 -05:00 [INF] Route matched with {action = "ListJourneys", controller = "Journey"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListJourneys(FlightsProject.UseCases.Journeys.List.FilterJourneyCommand) on controller FlightsProject.Web.Controllers.JourneyController (FlightsProject.Web).
+2024-11-25 15:25:23.948 -05:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Destination", "f"."JourneyId", "f"."Origin", "f"."Price", "f"."TRANSPORT"
+FROM "Flights" AS "f"
+2024-11-25 15:25:25.723 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[FlightsProject.UseCases.Journeys.JourneyDTO, FlightsProject.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-25 15:25:25.741 -05:00 [INF] Executed action FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web) in 1793.1943ms
+2024-11-25 15:25:25.744 -05:00 [INF] Executed endpoint 'FlightsProject.Web.Controllers.JourneyController.ListJourneys (FlightsProject.Web)'
+2024-11-25 15:25:25.750 -05:00 [INF] Request finished HTTP/2 POST https://localhost:57679/v1/journey - 200 null application/json; charset=utf-8 1806.5504ms

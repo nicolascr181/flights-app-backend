@@ -7,6 +7,7 @@ using Moq;
 using Xunit;
 
 namespace FlightsProject.UnitTests.UseCases;
+
 public class ListJourneysQueryHandlerTests
 {
   private readonly Mock<IFlightRepository> _mockFlightRepository;

@@ -1,4 +1,5 @@
 ﻿namespace FlightsProject.Core.Entities;
+
 public sealed class Flight
 {
   public Guid Id { get; private set; }
@@ -17,6 +18,5 @@ public sealed class Flight
 
   public Flight()
   {
-    
   }
 }

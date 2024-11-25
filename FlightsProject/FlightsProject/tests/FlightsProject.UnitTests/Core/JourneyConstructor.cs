@@ -2,6 +2,7 @@
 using Xunit;
 
 namespace FlightsProject.UnitTests.Core;
+
 public class JourneyConstructor
 {
   private readonly double _testTotalPrice = 5511.60;
@@ -16,7 +17,6 @@ public class JourneyConstructor
 
     return new Journey("MZL","BOG",flights, "USD");
   }
-
 
   [Fact]
   public void ComputeTotalPrice()

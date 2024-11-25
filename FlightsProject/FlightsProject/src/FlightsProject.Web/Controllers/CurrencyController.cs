@@ -24,6 +24,10 @@ public class CurrencyController: APIController
   /// <response code="400">If the request is invalid.</response>
   /// <response code="500">If an internal error occurs.</response>
   [HttpGet]
+  [ProducesResponseType(StatusCodes.Status200OK)] // Successful response
+  [ProducesResponseType(StatusCodes.Status400BadRequest)] // Bad request
+  [ProducesResponseType(StatusCodes.Status500InternalServerError)] // Internal server error
+  [Produces("application/json")]
   public async Task<IActionResult> GetCurrencyDetails()
   {
     var result = await _mediator.Send(new GetCurrenciesQuery());

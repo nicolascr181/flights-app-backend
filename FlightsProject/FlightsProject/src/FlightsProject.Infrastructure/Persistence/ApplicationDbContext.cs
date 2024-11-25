@@ -1,22 +1,21 @@
-﻿using Ardalis.SharedKernel;
-using FlightsProject.Core.Entities;
+﻿using FlightsProject.Core.Entities;
 using FlightsProject.Core.Primitives;
 using FlightsProject.UseCases.Data;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightsProject.Infrastructure.Persistence;
+
 public class ApplicationDbContext : DbContext, IApplicationDbContext, IUnitOfWork
 {
   private readonly IPublisher? _publisher;
+  public DbSet<Journey> Journeys { get; set; }
+  public DbSet<Flight> Flights { get; set; }
 
   public ApplicationDbContext(DbContextOptions options, IPublisher? publisher) : base(options)
   {
     _publisher = publisher;
   }
-
-  public DbSet<Journey> Journeys { get ; set ; }
-  public DbSet<Flight> Flights { get ; set ; }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {

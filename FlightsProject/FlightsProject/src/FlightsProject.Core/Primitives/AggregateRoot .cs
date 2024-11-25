@@ -1,4 +1,5 @@
 ﻿namespace FlightsProject.Core.Primitives;
+
 public abstract class AggregateRoot
 {
   private readonly List<DomainEvent> _domainEvents = new();

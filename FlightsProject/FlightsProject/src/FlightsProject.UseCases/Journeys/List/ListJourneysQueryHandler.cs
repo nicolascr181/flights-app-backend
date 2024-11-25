@@ -1,9 +1,9 @@
 ﻿using FlightsProject.Core.Entities;
 using FlightsProject.Core.Interfaces;
-using FlightsProject.UseCases.Conversion;
 using FlightsProject.UseCases.Graphs;
 
 namespace FlightsProject.UseCases.Journeys.List;
+
 public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyCommand, ErrorOr<List<JourneyDTO>>>
 {
   private readonly IFlightRepository _flightRepository;
@@ -14,6 +14,7 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
     _flightRepository = flightRepository ?? throw new ArgumentNullException(nameof(flightRepository));
     _journeyPriceConverter = journeyPriceConverter ?? throw new ArgumentNullException(nameof(journeyPriceConverter));
   }
+
   public async Task<ErrorOr<List<JourneyDTO>>> Handle(FilterJourneyCommand command, CancellationToken cancellationToken)
   {
     try

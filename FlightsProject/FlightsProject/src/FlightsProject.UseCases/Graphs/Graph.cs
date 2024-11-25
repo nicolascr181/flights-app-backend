@@ -1,9 +1,8 @@
 ﻿using FlightsProject.Core.Entities;
 namespace FlightsProject.UseCases.Graphs;
+
 public static class Graph
 {
-
-
 
   /// <summary>
   /// Function to find all paths from a source to a destination in a graph

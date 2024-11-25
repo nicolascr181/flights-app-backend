@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FlightsProject.Core.Entities;
+﻿using FlightsProject.Core.Entities;
 using FlightsProject.Core.Interfaces;
 
 namespace FlightsProject.UseCases.Conversion.List;
+
 public sealed class GetCurrencyDetailsQueryHandler : IRequestHandler<GetCurrenciesQuery,ErrorOr<IDictionary<string, CurrencyDetails>>>
 {
   private readonly ICurrencyConverter _currencyService;
@@ -20,7 +16,6 @@ public sealed class GetCurrencyDetailsQueryHandler : IRequestHandler<GetCurrenci
   {
     try
     {
-
       var currencyDetails = await _currencyService.GetCurrencyDetails();
 
       return new Dictionary<string, CurrencyDetails>(currencyDetails);

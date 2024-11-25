@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
 namespace FlightsProject.UseCases.Journeys.List;
+
 public record FilterJourneyCommand
 (
   [Required]

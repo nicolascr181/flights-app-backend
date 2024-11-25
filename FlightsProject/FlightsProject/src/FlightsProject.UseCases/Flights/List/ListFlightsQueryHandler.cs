@@ -1,9 +1,7 @@
 ﻿using FlightsProject.Core.Entities;
 using FlightsProject.Core.Interfaces;
 
-
 namespace FlightsProject.UseCases.Flights.List;
-
 
 internal sealed class ListFlightsQueryHandler : IRequestHandler<ListFlightsQuery, ErrorOr<IReadOnlyList<FlightDTO>>>
 {

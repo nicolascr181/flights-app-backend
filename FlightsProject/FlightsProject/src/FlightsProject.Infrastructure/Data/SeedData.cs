@@ -2,14 +2,12 @@
 using FlightsProject.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 
-
 namespace FlightsProject.Infrastructure.Data;
+
 public static class SeedData
 {
- 
   public static void Initialize(IServiceProvider serviceProvider)
   {
     using (var dbContext = new ApplicationDbContext(
@@ -22,6 +20,7 @@ public static class SeedData
 
     }
   }
+
   public static void PopulateTestData(ApplicationDbContext dbContext)
   {
     string jsonString = File.ReadAllText("markets.json");
