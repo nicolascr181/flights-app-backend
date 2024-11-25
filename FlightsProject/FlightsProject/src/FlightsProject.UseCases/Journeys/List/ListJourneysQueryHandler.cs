@@ -50,7 +50,7 @@ public sealed class ListJourneysQueryHandler : IRequestHandler<FilterJourneyComm
 
         List<Journey> returnJourneys = GenerateJourneys(flightList, returnOrigin, returnDestination,command);
 
-        if (!string.IsNullOrEmpty(currencyType) && !currencyType.Equals("USD"))
+        if (!string.IsNullOrEmpty(currencyType))
         {
           journeys = await _journeyPriceConverter.ConvertPrices(returnJourneys, currencyType);
         }
